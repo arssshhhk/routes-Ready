@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- home section starts here  -->
+    <section class="home">
+        <div class="home-box">
+            <nav>
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <h3>RoutesReady</h3>
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">Customize</a></li>
+                        <li><a href="#">travel packages</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="signup-login">
+                    <a href="#">sign up</a>
+                    <a href="#">login</a>
+                </div> -->
+            </nav>
+
+            <div class="content">
+                <h2>Where every trip starts with a smile and ends with a story</h2>
+                
+
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="your jouney begins with a search...">
+                    <button>search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section ends here  -->
+
+    <!-- travel section starts here  -->
+    
+    <!-- travel section ends here  -->
+
+    <!-- destinatons section starts here  -->
+    <section class="destinations">
+        <h4 class="label">destinations</h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">Plan Your Itenary</h2>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero culpa pariatur iusto sequi, ut expedita soluta nihil est quaerat itaque corporis maiores in, at id officiis tempore. Harum vitae fugit itaque expedita asperiores vero delectus?</p>
+                    <a href="#">explore more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="box box1">
+                    <img src="home-background.jpg" alt="">
+                    <div class="text">
+                        <h2>Jaipur</h2>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <img src="destinations-1.jpg" alt="">
+                    <div class="text">
+                        <h2>Udaipur</h2>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <img src="destinations-2.jpg" alt="">
+                    <div class="text">
+                        <h2>Jaisalmer</h2>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <img src="destinations-3.jpg" alt="">
+                    <div class="text">
+                        <h2>Manali</h2>
+                    </div>
+                </div>
+                <div class="box box5">
+                    <img src="destinations-4.jpg" alt="">
+                    <div class="text">
+                        <h2>Ladakh</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- feedback section starts here  -->
+    <section class="feedback">
+        <style>
+            /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+        </style>
+        <div class="container">
+            <h2 class="heading" style="color: #555;">Trending Trips</h2>
+            <p class="paragraph">
+                <a href="#" style="color: #2b90c6;">explore more <i class="fa fa-arrow-right"></i></a><br>
+            </p>
+            <br>
+        <div class="container">
+            <div class="card__container">
+               <article class="card__article">
+                  <img src="./featured-3.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Jaipur</span>
+                     <h2 class="card__title">The Great Path</h2>
+                     <a href="#" class="card__button">Read More</a>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="./featured-2.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Jaipur</span>
+                     <h2 class="card__title">Starry Night</h2>
+                     <a href="#" class="card__button">Read More</a>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="./featured-3.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Jaipur</span>
+                     <h2 class="card__title">Path Of Peace</h2>
+                     <a href="#" class="card__button">Read More</a>
+                  </div>
+               </article>
+               <article class="card__article">
+                  <img src="./featured-3.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Jaipur</span>
+                     <h2 class="card__title">The Great Path</h2>
+                     <a href="#" class="card__button">Read More</a>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="./featured-2.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Jaipur</span>
+                     <h2 class="card__title">Starry Night</h2>
+                     <a href="#" class="card__button">Read More</a>
+                  </div>
+               </article>
+   
+               <article class="card__article">
+                  <img src="./featured-3.jpg" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                     <span class="card__description">Jaipur</span>
+                     <h2 class="card__title">Path Of Peace</h2>
+                     <a href="#" class="card__button">Read More</a>
+                  </div>
+               </article>
+            </div>
+         </div>
+         </div>
+        
+    </section>
+    <!-- feedback section ends here  -->
+
+    
+
+    <section class="why-choose-us">
+        <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: Arial, sans-serif;
+          }
+          
+          body {
+              background: #fdf6e3;
+          }
+          
+          .header {
+              background: linear-gradient(to right, #54c0eb, #2b90c6);
+              padding: 10px 30px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: white;
+          }
+          
+          .header .contact {
+              font-size: 18px;
+          }
+          
+          .why-choose-us {
+              display: flex;
+              padding: 40px;
+              gap: 30px;
+              color: rgb(107, 107, 238);
+          }
+          
+          .gallerys {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 10px;
+              max-width: 500px;
+          }
+          
+          .gallerys img {
+              width: auto;
+              height: auto;
+              border-radius: 10px;
+          }
+          
+          .contents {
+              max-width: 900px;
+          }
+          
+          .content h3 {
+              color: #0087c4;
+              font-size: 14px;
+              text-transform: uppercase;
+          }
+          
+          .contents h1 {
+              font-size: 38px;
+              margin: 5px 0;
+          }
+          
+          .subtitle {
+              font-style: italic;
+              color: gray;
+              margin-bottom: 10px;
+          }
+          
+          .contents h4 {
+              margin-top: 15px;
+              color: #333;
+          }
+          
+          .contents p {
+              font-size: 25px;
+              line-height: 1.5;
+              color: #555;
+          }
+          
+          .explore-link {
+              display: inline-block;
+              margin-top: 10px;
+              color: #0087c4;
+              font-weight: bold;
+              text-decoration: none;
+          }
+          
+          .features {
+              display: flex;
+              flex-wrap: wrap;
+              margin-top: 20px;
+              gap: 20px;
+          }
+          
+          .feature {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              width: 100px;
+          }
+          
+          .feature i {
+              font-size: 24px;
+              background: #0087c4;
+              color: white;
+              padding: 10px;
+              border-radius: 50%;
+          }
+          
+          .feature p {
+              font-size: 12px;
+              margin-top: 8px;
+          }
+          
+          </style>
+        <div class="gallerys">
+            <img src="./featured-1.jpg" alt="Temple">
+            <img src="./destinations-4.jpg" alt="St. Basil's Cathedral">
+            <img src="featured-1.jpg" alt="Boat Ride">
+            <img src="destinations-4.jpg" alt="Frozen Waterfall">
+            <img src="featured-1.jpg" alt="Kayaking">
+        </div>
+
+        <div class="contents">
+            <h3>WHY CHOOSE US</h3>
+            <h1>Why RoutesReady ?</h1>
+            <p class="subtitle">"Where Every Trip Starts with a Smile and Ends with a Story"</p>
+
+            <h4>We Curate Each Trip Personally</h4>
+            <p>You know those "one-size-fits-all" itineraries? Yeah, we don’t do that. Before we take you anywhere, we go there first...</p>
+
+            <h4>Helping you live the "Bunny" Life</h4>
+            <p>Scuba Diving, Northern lights, Bike trips? If it’s on your bucket list, we’re making it happen...</p>
+
+            <h4>Prioritise Female Safety</h4>
+            <p>Ladies, we’ve got you covered. Our female-friendly trips ensure you feel safe...</p>
+
+            <a href="#" class="explore-link">Explore All Features</a>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <p>Personalized <br> Handpicked Itineraries</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hiking"></i>
+                    <p>Offbeat <br> Experiences Only</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mountain"></i>
+                    <p>Adventure <br> More Than Just Sightseeing</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-venus"></i>
+                    <p>Safety <br> Always a Priority</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <p>Community <br> Meet Like-Minded Travelers</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-wallet"></i>
+                    <p>Affordable <br> Travel Made Affordable</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-smile"></i>
+                    <p>500+ <br> Happy Travelers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- article section ends here  -->
+
+    <!-- footer section starts here  -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3>RoutesReady</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
+                    <h5>get in touch</h5>
+                    <a href="#">example@mail.com</a>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="about-us">
+                    <h4>about us</h4>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our term</a></li>
+                    <li><a href="#">careers <span>we're hiring!</span></a></li>
+                    <li><a href="#">mission and values</a></li>
+                    <li><a href="#">partnerships</a></li>
+                </div> -->
+                <!-- <div class="about-us">
+                    <h4>help</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">booking guide</a></li>
+                    <li><a href="#">cancellation policy</a></li>
+                    <li><a href="#">site map</a></li>
+                </div> -->
+                <!-- <div class="about-us">
+                    <h4>Resources</h4>
+                    <li><a href="#">newsletter</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">gallery</li>
+                    <li><a href="#">offers</a></li>
+                </div> -->
+            </div>
+
+            <div class="copyright">
+                <div>
+                    &copy;2024 - RoutesReady, inc, all rights reserved
+                </div>
+                <div>
+                    <a href="#">term & conditions</a>
+                    <a href="#">privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer section ends here  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const bars = document.querySelector(".bar"),
+close = document.querySelector(".close"),
+menu = document.querySelector(".menu");
+
+bars.addEventListener("click", () => {
+    menu.classList.add("active");
+    gsap.from(".menu", {
+        opacity: 0,
+        duration: .3
+    })
+
+    gsap.from(".menu ul", {
+        opacity: 0,
+        x: -300
+    })
+});
+
+close.addEventListener("click", () => {
+    menu.classList.remove("active")
+});
+
+function animateContent(selector) {
+    selector.forEach((selector) => {
+        gsap.to(selector, {
+            y: 30,
+            duration: 0.1,
+            opacity: 1,
+            delay: 0.2,
+            stagger: 0.2,
+            ease: "power2.out",
+        });
+    });
+}
+
+function scrollTirggerAnimation(triggerSelector, boxSelectors) {
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: triggerSelector,
+            start: "top 50%",
+            end: "top 80%",
+            scrub: 1,
+        },
+    });
+
+    boxSelectors.forEach((boxSelector) => {
+        timeline.to(boxSelector, {
+            y: 0,
+            duration: 1,
+            opacity: 1,
+        });
+    })
+}
+
+function swipeAnimation(triggerSelector, boxSelectors) {
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: triggerSelector,
+            start: "top 50%",
+            end: "top 100%",
+            scrub: 3,
+        },
+    });
+
+    boxSelectors.forEach((boxSelector) => {
+        timeline.to(boxSelector, {
+            x: 0,
+            duration: 1,
+            opacity:1,
+        });
+    });
+}
+
+function galleryAnimation(triggerSelector, boxSelectors) {
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: triggerSelector,
+            start: "top 100%",
+            end: "bottom 100%",
+            scrub: 1,
+        },
+    });
+
+    boxSelectors.forEach((boxSelector) => {
+        timeline.to(boxSelector, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+        });
+    });
+}
+
+
+
+
+animateContent([".home .content h5, .home .content h1, .home .content p, .home .content .search"]);
+
+scrollTirggerAnimation(".travel", [".travel .box1", ".travel .box2", ".travel .box3"]);
+
+scrollTirggerAnimation(".feedback .container", [".feedback .label", ".feedback .heading", ".feedback .paragraph"]);
+
+scrollTirggerAnimation(".article", [".article .label", ".article .heading"]);
+
+swipeAnimation(".destinations", [".destinations .heading", ".destinations .content"])
+
+swipeAnimation(".article", [".article .latest-article", ".article .box1", ".article .box2", ".article .box3", ".article .box4"])
+
+galleryAnimation(".destinations .gallery", [".destinations .gallery .box1",".destinations .gallery .box2",".destinations .gallery .box3",".destinations .gallery .box4",".destinations .gallery .box5"])
+
+galleryAnimation(".featured .gallery", [".featured .gallery .box1",".featured .gallery .box2",".featured .gallery .box3",".featured .gallery .box4"])
+
+galleryAnimation(".feedback .voices", [".feedback .voices .box1",".feedback .voices .box2",".feedback .voices .box3",".feedback .voices .box4",".feedback .voices .box5",".feedback .voices .box6"])
+
+
+    </script>
+</body>
+</html>
