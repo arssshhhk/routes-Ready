@@ -35,7 +35,8 @@
             </nav>
 
             <div class="content">
-                <h2>Where every trip starts with a smile and ends with a story</h2>
+                <h2>Where Every Trip Starts<span style="color: #53acdc; font-size: 4rem;">With A</span></h2>
+                <h2><span style="color: #53acdc; font-size: 4rem;">Smile</span> And Ends<span style="color: #2d8bbd; font-size: 4rem;">With A Story</span></h2>
                 
 
                 <div class="search">
@@ -54,7 +55,6 @@
 
     <!-- destinatons section starts here  -->
     <section class="destinations">
-        <h4 class="label">destinations</h4>
         <div class="container">
             <div class="container-box">
                 <h2 class="heading">Plan Your Itenary</h2>
@@ -98,285 +98,52 @@
         </div>
     </section>
 
-    <!-- feedback section starts here  -->
-    <section class="feedback">
-        <style>
-            /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
-/*=============== VARIABLES CSS ===============*/
-:root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(82, 60%, 28%);
-  --title-color: hsl(0, 0%, 15%);
-  --text-color: hsl(0, 0%, 35%);
-  --body-color: hsl(0, 0%, 95%);
-  --container-color: hsl(0, 0%, 100%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --h2-font-size: 1.25rem;
-  --small-font-size: .813rem;
-}
-
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1120px) {
-  :root {
-    --h2-font-size: 1.5rem;
-    --small-font-size: .875rem;
-  }
-}
-
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: var(--body-font);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/*=============== CARD ===============*/
-.container {
-  display: grid;
-  place-items: center;
-  margin-inline: 1.5rem;
-  padding-block: 5rem;
-}
-
-.card__container {
-  display: grid;
-  row-gap: 3.5rem;
-}
-
-.card__article {
-  position: relative;
-  overflow: hidden;
-}
-
-.card__img {
-  width: 328px;
-  border-radius: 1.5rem;
-}
-
-.card__data {
-  width: 280px;
-  background-color: var(--container-color);
-  padding: 1.5rem 2rem;
-  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-  border-radius: 1rem;
-  position: absolute;
-  bottom: -9rem;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  opacity: 0;
-  transition: opacity 1s 1s;
-}
-
-.card__description {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: .25rem;
-}
-
-.card__title {
-  font-size: var(--h2-font-size);
-  font-weight: 500;
-  color: var(--title-color);
-  margin-bottom: .75rem;
-}
-
-.card__button {
-  text-decoration: none;
-  font-size: var(--small-font-size);
-  font-weight: 500;
-  color: var(--first-color);
-}
-
-.card__button:hover {
-  text-decoration: underline;
-}
-
-/* Naming animations in hover */
-.card__article:hover .card__data {
-  animation: show-data 1s forwards;
-  opacity: 1;
-  transition: opacity .3s;
-}
-
-.card__article:hover {
-  animation: remove-overflow 2s forwards;
-}
-
-.card__article:not(:hover) {
-  animation: show-overflow 2s forwards;
-}
-
-.card__article:not(:hover) .card__data {
-  animation: remove-data 1s forwards;
-}
-
-/* Card animation */
-@keyframes show-data {
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(-7rem);
-  }
-}
-
-@keyframes remove-overflow {
-  to {
-    overflow: initial;
-  }
-}
-
-@keyframes remove-data {
-  0% {
-    transform: translateY(-7rem);
-  }
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(.5rem);
-  }
-}
-
-@keyframes show-overflow {
-  0% {
-    overflow: initial;
-    pointer-events: none;
-  }
-  50% {
-    overflow: hidden;
-  }
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 340px) {
-  .container {
-    margin-inline: 1rem;
-  }
-
-  .card__data {
-    width: 250px;
-    padding: 1rem;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 768px) {
-  .card__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1120px) {
-  .container {
-    height: 100vh;
-  }
-
-  .card__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .card__img {
-    width: 348px;
-  }
-  .card__data {
-    width: 316px;
-    padding-inline: 2.5rem;
-  }
-}
-        </style>
+    <section class="destinations">
         <div class="container">
-            <h2 class="heading" style="color: #555;">Trending Trips</h2>
-            <p class="paragraph">
-                <a href="#" style="color: #2b90c6;">explore more <i class="fa fa-arrow-right"></i></a><br>
-            </p>
-            <br>
-        <div class="container">
-            <div class="card__container">
-               <article class="card__article">
-                  <img src="./featured-3.jpg" alt="image" class="card__img">
-   
-                  <div class="card__data">
-                     <span class="card__description">Jaipur</span>
-                     <h2 class="card__title">The Great Path</h2>
-                     <a href="#" class="card__button">Read More</a>
-                  </div>
-               </article>
-   
-               <article class="card__article">
-                  <img src="./featured-2.jpg" alt="image" class="card__img">
-   
-                  <div class="card__data">
-                     <span class="card__description">Jaipur</span>
-                     <h2 class="card__title">Starry Night</h2>
-                     <a href="#" class="card__button">Read More</a>
-                  </div>
-               </article>
-   
-               <article class="card__article">
-                  <img src="./featured-3.jpg" alt="image" class="card__img">
-   
-                  <div class="card__data">
-                     <span class="card__description">Jaipur</span>
-                     <h2 class="card__title">Path Of Peace</h2>
-                     <a href="#" class="card__button">Read More</a>
-                  </div>
-               </article>
-               <article class="card__article">
-                  <img src="./featured-3.jpg" alt="image" class="card__img">
-   
-                  <div class="card__data">
-                     <span class="card__description">Jaipur</span>
-                     <h2 class="card__title">The Great Path</h2>
-                     <a href="#" class="card__button">Read More</a>
-                  </div>
-               </article>
-   
-               <article class="card__article">
-                  <img src="./featured-2.jpg" alt="image" class="card__img">
-   
-                  <div class="card__data">
-                     <span class="card__description">Jaipur</span>
-                     <h2 class="card__title">Starry Night</h2>
-                     <a href="#" class="card__button">Read More</a>
-                  </div>
-               </article>
-   
-               <article class="card__article">
-                  <img src="./featured-3.jpg" alt="image" class="card__img">
-   
-                  <div class="card__data">
-                     <span class="card__description">Jaipur</span>
-                     <h2 class="card__title">Path Of Peace</h2>
-                     <a href="#" class="card__button">Read More</a>
-                  </div>
-               </article>
+            <div class="container-box">
+                <h2 class="heading">Trending Trips</h2>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero culpa pariatur iusto sequi, ut expedita soluta nihil est quaerat itaque corporis maiores in, at id officiis tempore. Harum vitae fugit itaque expedita asperiores vero delectus?</p>
+                    <a href="#">explore more <i class="fa fa-arrow-right"></i></a>
+                </div>
             </div>
-         </div>
-         </div>
-        
+            <div class="gallery">
+                <div class="box box1">
+                    <img src="home-background.jpg" alt="">
+                    <div class="text">
+                        <h2>Jaipur</h2>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <img src="destinations-1.jpg" alt="">
+                    <div class="text">
+                        <h2>Udaipur</h2>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <img src="destinations-2.jpg" alt="">
+                    <div class="text">
+                        <h2>Jaisalmer</h2>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <img src="destinations-3.jpg" alt="">
+                    <div class="text">
+                        <h2>Manali</h2>
+                    </div>
+                </div>
+                <div class="box box5">
+                    <img src="destinations-4.jpg" alt="">
+                    <div class="text">
+                        <h2>Ladakh</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+<br>
+    <!-- feedback section starts here  -->
+    
     <!-- feedback section ends here  -->
 
     
@@ -411,7 +178,7 @@ img {
               display: flex;
               padding: 40px;
               gap: 30px;
-              color: rgb(107, 107, 238);
+              color: rgb(30, 123, 157)
           }
           
           .gallerys {
@@ -428,11 +195,11 @@ img {
           }
           
           .contents {
-              max-width: 900px;
+              max-width: 800px;
           }
           
           .content h3 {
-              color: #0087c4;
+              color: rgb(30, 123, 157)
               font-size: 14px;
               text-transform: uppercase;
           }
@@ -497,11 +264,11 @@ img {
           
           </style>
         <div class="gallerys">
-            <img src="./featured-1.jpg" alt="Temple">
-            <img src="./destinations-4.jpg" alt="St. Basil's Cathedral">
-            <img src="featured-1.jpg" alt="Boat Ride">
-            <img src="destinations-4.jpg" alt="Frozen Waterfall">
-            <img src="featured-1.jpg" alt="Kayaking">
+            <img src="" alt="Temple">
+            <img src="" alt="St. Basil's Cathedral">
+            <img src="" alt="Boat Ride">
+            <img src="" alt="Frozen Waterfall">
+            <img src="" alt="Kayaking">
         </div>
 
         <div class="contents">
@@ -522,15 +289,15 @@ img {
 
             <div class="features">
                 <div class="feature">
-                    <i class="fas fa-hand-holding-heart"></i>
+                    <i class="fas fa-venus"></i>
                     <p>Personalized <br> Handpicked Itineraries</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-hiking"></i>
+                    <i class="fas fa-venus"></i>
                     <p>Offbeat <br> Experiences Only</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-mountain"></i>
+                    <i class="fas fa-venus"></i>
                     <p>Adventure <br> More Than Just Sightseeing</p>
                 </div>
                 <div class="feature">
@@ -538,15 +305,15 @@ img {
                     <p>Safety <br> Always a Priority</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-venus"></i>
                     <p>Community <br> Meet Like-Minded Travelers</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-wallet"></i>
+                    <i class="fas fa-venus"></i>
                     <p>Affordable <br> Travel Made Affordable</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-smile"></i>
+                    <i class="fas fa-venus"></i>
                     <p>500+ <br> Happy Travelers</p>
                 </div>
             </div>
